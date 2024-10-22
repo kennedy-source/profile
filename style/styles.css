@@ -1,0 +1,217 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #4db8ff;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header nav ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e0f7ff;
+    text-decoration: underline;
+}
+
+header .intro h1 {
+    font-size: 3rem;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+header .intro h1 span {
+    color: #004080;
+}
+
+header .intro p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    color: #ffffffb3;
+    animation: fadeIn 3s ease-in-out;
+}
+
+
+header .profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    animation: rotateIn 1.5s ease-in-out;
+}
+
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #004080;
+    text-align: center;
+    animation: bounceIn 2s ease-in;
+}
+
+.skills-grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 20px;
+}
+
+.skill{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.skill:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: pulse 1s infinite;
+}
+
+.stars {
+    font-size: 1.5rem;
+    color: gold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #004080;
+    outline: none;
+}
+
+
+.contact-form button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 2s ease-in;
+}
+
+.contact-form button:hover {
+    background-color: #003366;
+    animation: pulse 0.8s infinite;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 1.5s ease-in;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    animation: pulse 1.2s infinite;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+
+@keyframes rotateIn {
+    from { transform: rotate(-360deg); }
+    to { transform: rotate(0); }
+}
+
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
